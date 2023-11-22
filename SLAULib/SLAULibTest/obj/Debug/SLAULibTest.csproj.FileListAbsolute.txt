@@ -1,0 +1,28 @@
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe.config
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.pdb
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULIB.dll
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.exe
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.pdb
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe.config
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.pdb
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\bin\Debug\SLAULIB.pdb
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.AssemblyReference.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.CopyComplete
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.exe
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.pdb
+C:\Users\user\Desktop\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe.config
+C:\Users\user\Desktop\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.exe
+C:\Users\user\Desktop\SLAULib\SLAULibTest\bin\Debug\SLAULibTest.pdb
+C:\Users\user\Desktop\SLAULib\SLAULibTest\bin\Debug\SLAULIB.dll
+C:\Users\user\Desktop\SLAULib\SLAULibTest\bin\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.csproj.CopyComplete
+C:\Users\user\Desktop\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.exe
+C:\Users\user\Desktop\SLAULib\SLAULibTest\obj\Debug\SLAULibTest.pdb

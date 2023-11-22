@@ -1,0 +1,17 @@
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULIB\SLAULIB\bin\Debug\SLAULIB.dll
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULIB\SLAULIB\bin\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULIB\SLAULIB\obj\Debug\SLAULIB.dll
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULIB\SLAULIB\obj\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\temp\О-21-ИАС-аид-С\Численные методы\SLAULib\SLAULIB\obj\Debug\SLAULIB.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\bin\Debug\SLAULIB.dll
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\bin\Debug\SLAULIB.pdb
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\obj\Debug\SLAULIB.csproj.AssemblyReference.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\obj\Debug\SLAULIB.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\obj\Debug\SLAULIB.dll
+C:\Users\User\Documents\21-IAS\Численные методы\SLAULib\SLAULIB\obj\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\SLAULib\SLAULIB\bin\Debug\SLAULIB.dll
+C:\Users\user\Desktop\SLAULib\SLAULIB\bin\Debug\SLAULIB.pdb
+C:\Users\user\Desktop\SLAULib\SLAULIB\obj\Debug\SLAULIB.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SLAULib\SLAULIB\obj\Debug\SLAULIB.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SLAULib\SLAULIB\obj\Debug\SLAULIB.dll
+C:\Users\user\Desktop\SLAULib\SLAULIB\obj\Debug\SLAULIB.pdb

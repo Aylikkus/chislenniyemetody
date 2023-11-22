@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\SLAULIB.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\SLAULIB.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\SLAULIB.csproj",
+        "projectName": "SLAULIB",
+        "projectPath": "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\SLAULIB.csproj",
+        "projectJsonPath": "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\project.json",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\SLAULib\\SLAULIB\\obj\\",
+        "projectStyle": "ProjectJson",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        }
+      },
+      "dependencies": {
+        "Microsoft.NETCore": "[5.0.0, )",
+        "Microsoft.NETCore.Portable.Compatibility": "[1.0.0, )"
+      },
+      "frameworks": {
+        "dotnet50": {
+          "imports": [
+            "portable-net452+win81"
+          ]
+        }
+      },
+      "supports": {
+        "net46.app": {},
+        "uwp.10.0.app": {}
+      }
+    }
+  }
+}
