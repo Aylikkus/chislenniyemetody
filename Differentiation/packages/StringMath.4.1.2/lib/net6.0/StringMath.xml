@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringMath</name>
+    </assembly>
+    <members>
+        <member name="T:StringMath.Expressions.BinaryExpression">
+            <summary>A binary expression.</summary>
+        </member>
+        <member name="M:StringMath.Expressions.BinaryExpression.#ctor(StringMath.Expressions.IExpression,System.String,StringMath.Expressions.IExpression)">
+            <summary>Initializez a new instance of a binary expression.</summary>
+            <param name="left">The left expression tree.</param>
+            <param name="operatorName">The binary operator's name.</param>
+            <param name="right">The right expression tree.</param>
+        </member>
+        <member name="P:StringMath.Expressions.BinaryExpression.Left">
+            <summary>The left expression tree.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.BinaryExpression.OperatorName">
+            <summary>The binary operator's name.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.BinaryExpression.Right">
+            <summary>The right expression tree.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.BinaryExpression.Type">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Expressions.BinaryExpression.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Expressions.ConstantExpression">
+            <summary>A constant expression.</summary>
+        </member>
+        <member name="M:StringMath.Expressions.ConstantExpression.#ctor(System.String)">
+            <summary>Initializes a new instance of a constant expression.</summary>
+            <param name="value">The value of the constant.</param>
+        </member>
+        <member name="M:StringMath.Expressions.ConstantExpression.#ctor(System.Double)">
+            <summary>Initializes a new instance of a constant expression.</summary>
+            <param name="value">The value of the constant.</param>
+        </member>
+        <member name="P:StringMath.Expressions.ConstantExpression.Value">
+            <summary>The constant value.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.ConstantExpression.Type">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Expressions.ConstantExpression.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Expressions.ExpressionType">
+            <summary>Available expression types.</summary>
+        </member>
+        <member name="F:StringMath.Expressions.ExpressionType.UnaryExpression">
+            <summary><see cref="T:StringMath.Expressions.UnaryExpression"/>.</summary>
+        </member>
+        <member name="F:StringMath.Expressions.ExpressionType.BinaryExpression">
+            <summary><see cref="T:StringMath.Expressions.BinaryExpression"/>.</summary>
+        </member>
+        <member name="F:StringMath.Expressions.ExpressionType.VariableExpression">
+            <summary><see cref="T:StringMath.Expressions.VariableExpression"/>.</summary>
+        </member>
+        <member name="F:StringMath.Expressions.ExpressionType.ConstantExpression">
+            <summary><see cref="T:StringMath.Expressions.ConstantExpression"/>.</summary>
+        </member>
+        <member name="T:StringMath.Expressions.IExpression">
+            <summary>Contract for expressions.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.IExpression.Type">
+            <summary>The type of the expression.</summary>
+        </member>
+        <member name="M:StringMath.Expressions.IExpression.ToString(StringMath.IMathContext)">
+            <summary>Creates a string representation of the expression in the provided context.</summary>
+            <param name="context">The context in which this expression is printed.</param>
+            <returns>A string representation of the expression.</returns>
+        </member>
+        <member name="T:StringMath.Expressions.UnaryExpression">
+            <summary>An unary expression.</summary>
+        </member>
+        <member name="M:StringMath.Expressions.UnaryExpression.#ctor(System.String,StringMath.Expressions.IExpression)">
+            <summary>Initializes a new instance of an unary expression.</summary>
+            <param name="operatorName">The unary operator's name.</param>
+            <param name="operand">The operand expression.</param>
+        </member>
+        <member name="P:StringMath.Expressions.UnaryExpression.OperatorName">
+            <summary>The unary operator's name.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.UnaryExpression.Operand">
+            <summary>The operand expression.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.UnaryExpression.Type">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Expressions.UnaryExpression.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Expressions.VariableExpression">
+            <summary>A variable expression.</summary>
+        </member>
+        <member name="M:StringMath.Expressions.VariableExpression.#ctor(System.String)">
+            <summary>Initializes a new instance of a variable expression.</summary>
+            <param name="name">The variable name.</param>
+        </member>
+        <member name="P:StringMath.Expressions.VariableExpression.Name">
+            <summary>The variable name.</summary>
+        </member>
+        <member name="P:StringMath.Expressions.VariableExpression.Type">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Expressions.VariableExpression.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Extensions">
+            <summary>Helpful extension methods.</summary>
+        </member>
+        <member name="M:StringMath.Extensions.EnsureNotNull``1(``0,System.String)">
+            <summary>Throws an <see cref="T:System.ArgumentNullException"/> if <paramref name="value"/> is null.</summary>
+            <typeparam name="T">The parameter's type.</typeparam>
+            <param name="value">The parameter's value.</param>
+            <param name="name">The parameter's name.</param>
+        </member>
+        <member name="M:StringMath.Extensions.ToReadableString(StringMath.TokenType)">
+            <summary>Converts a token type to a readable string.</summary>
+            <param name="tokenType">The token type.</param>
+            <returns>A readable string.</returns>
+        </member>
+        <member name="T:StringMath.MathExprExtensions">
+            <summary>Extensions for <see cref="T:StringMath.MathExpr"/>.</summary>
+        </member>
+        <member name="M:StringMath.MathExprExtensions.ToMathExpr(System.String)">
+            <summary>Converts a string expression to a <see cref="T:StringMath.MathExpr"/>.</summary>
+            <param name="expr">The string to convert.</param>
+            <returns>A <see cref="T:StringMath.MathExpr"/>.</returns>
+        </member>
+        <member name="M:StringMath.MathExprExtensions.ToMathExpr(System.String,StringMath.IMathContext)">
+            <summary>Converts a string expression to a <see cref="T:StringMath.MathExpr"/>.</summary>
+            <param name="expr">The string to convert.</param>
+            <param name="context">The context to use for the resulting expression.</param>
+            <returns>A <see cref="T:StringMath.MathExpr"/>.</returns>
+        </member>
+        <member name="M:StringMath.MathExprExtensions.Eval(System.String)">
+            <summary>Evaluates a math expression from a string.</summary>
+            <param name="value">The math expression.</param>
+            <returns>The result as a double.</returns>
+        </member>
+        <member name="M:StringMath.MathExprExtensions.Eval(System.String,StringMath.IMathContext)">
+            <summary>Evaluates a math expression from a string in a given context.</summary>
+            <param name="value">The math expression.</param>
+            <param name="context">The context used to evaluate the expression.</param>
+            <returns>The result as a double.</returns>
+        </member>
+        <member name="M:StringMath.MathExprExtensions.Substitute(System.String,System.String,System.Double)">
+            <summary>Converts a string to a <see cref="T:StringMath.MathExpr"/> and substitutes the given variable.</summary>
+            <param name="expr">The math expression.</param>
+            <param name="var">The variable's name.</param>
+            <param name="val">The variable's value.</param>
+            <returns>A <see cref="T:StringMath.MathExpr"/>.</returns>
+        </member>
+        <member name="T:StringMath.IMathContext">
+            <summary>Contract for math context.</summary>
+        </member>
+        <member name="P:StringMath.IMathContext.Parent">
+            <summary>The parent math context to inherit operators from.</summary>
+        </member>
+        <member name="M:StringMath.IMathContext.RegisterBinary(System.String,System.Func{System.Double,System.Double,System.Double},System.Nullable{StringMath.Precedence})">
+            <summary>Registers a binary operator implementation.</summary>
+            <param name="operatorName">The name of the operator.</param>
+            <param name="operation">The implementation of the operator.</param>
+            <param name="precedence">The precedence of the operator.</param>
+        </member>
+        <member name="M:StringMath.IMathContext.RegisterUnary(System.String,System.Func{System.Double,System.Double})">
+            <summary>Registers an unary operator implementation. Precedence is <see cref="F:StringMath.Precedence.Prefix"/>.</summary>
+            <param name="operatorName">The name of the operator.</param>
+            <param name="operation">The implementation of the operator.</param>
+        </member>
+        <member name="M:StringMath.IMathContext.EvaluateBinary(System.String,System.Double,System.Double)">
+            <summary>Evaluates a binary operation.</summary>
+            <param name="op">The operator.</param>
+            <param name="a">Left value.</param>
+            <param name="b">Right value.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="M:StringMath.IMathContext.EvaluateUnary(System.String,System.Double)">
+            <summary>Evaluates an unary operation.</summary>
+            <param name="op">The operator.</param>
+            <param name="a">The value.</param>
+            <returns>The result.</returns>
+        </member>
+        <member name="M:StringMath.IMathContext.GetBinaryPrecedence(System.String)">
+            <summary>Returns the precedence of a binary operator. Unary operators have <see cref="F:StringMath.Precedence.Prefix"/> precedence.</summary>
+            <param name="operatorName">The operator.</param>
+            <returns>A <see cref="T:StringMath.Precedence"/> value.</returns>
+        </member>
+        <member name="M:StringMath.IMathContext.IsBinary(System.String)">
+            <summary>Tells whether an operator is binary.</summary>
+            <param name="operatorName">The operator.</param>
+            <returns>True if the operator is binary, false if it does not exist or it is unary.</returns>
+        </member>
+        <member name="M:StringMath.IMathContext.IsUnary(System.String)">
+            <summary>Tells whether an operator is unary.</summary>
+            <param name="operatorName">The operator.</param>
+            <returns>True if the operator is unary, false if it does not exist or it is binary.</returns>
+        </member>
+        <member name="T:StringMath.MathContext">
+            <inheritdoc />
+            <remarks>Inherits operators from <see cref="P:StringMath.MathContext.Parent"/>.</remarks>
+        </member>
+        <member name="F:StringMath.MathContext.Default">
+            <summary>The global instance used by <see cref="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double})"/> methods.</summary>
+        </member>
+        <member name="P:StringMath.MathContext.Parent">
+            <summary>The parent context to inherit from.</summary>
+        </member>
+        <member name="M:StringMath.MathContext.#ctor(StringMath.IMathContext)">
+            <summary>Creates a new instance of a MathContext.</summary>
+            <param name="parent">The parent context to inherit operators from.</param>
+        </member>
+        <member name="M:StringMath.MathContext.#ctor">
+            <summary>Creates a new instance of a MathContext.</summary>
+        </member>
+        <member name="M:StringMath.MathContext.IsUnary(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.IsBinary(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.GetBinaryPrecedence(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.RegisterBinary(System.String,System.Func{System.Double,System.Double,System.Double},System.Nullable{StringMath.Precedence})">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.RegisterUnary(System.String,System.Func{System.Double,System.Double})">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.EvaluateBinary(System.String,System.Double,System.Double)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.MathContext.EvaluateUnary(System.String,System.Double)">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.MathException">
+            <summary>Base library exception.</summary>
+        </member>
+        <member name="T:StringMath.MathException.ErrorCode">
+            <summary>Available error codes.</summary>
+        </member>
+        <member name="F:StringMath.MathException.ErrorCode.UNEXPECTED_TOKEN">
+            <summary>Unexpected token.</summary>
+        </member>
+        <member name="F:StringMath.MathException.ErrorCode.UNASSIGNED_VARIABLE">
+            <summary>Unassigned variable.</summary>
+        </member>
+        <member name="F:StringMath.MathException.ErrorCode.UNDEFINED_OPERATOR">
+            <summary>Missing operator.</summary>
+        </member>
+        <member name="F:StringMath.MathException.ErrorCode.UNEXISTING_VARIABLE">
+            <summary>Missing variable.</summary>
+        </member>
+        <member name="F:StringMath.MathException.ErrorCode.READONLY_VARIABLE">
+            <summary>Readonly variable.</summary>
+        </member>
+        <member name="M:StringMath.MathException.#ctor(StringMath.MathException.ErrorCode,System.String)">
+            <summary>Initializes a new instance of a <see cref="T:StringMath.MathException"/>.</summary>
+            <param name="errorCode">The error code.</param>
+            <param name="message">The message to describe the error.</param>
+        </member>
+        <member name="P:StringMath.MathException.Code">
+            <summary>The error code of the exception.</summary>
+        </member>
+        <member name="P:StringMath.MathException.Position">
+            <summary>The position of the token where the exception was raised.</summary>
+        </member>
+        <member name="T:StringMath.MathExpr">
+            <summary>A mathematical expression.</summary>
+        </member>
+        <member name="P:StringMath.MathExpr.Context">
+            <summary>The <see cref="T:StringMath.IMathContext"/> in which this expression is evaluated.</summary>
+        </member>
+        <member name="P:StringMath.MathExpr.LocalVariables">
+            <summary>A collection of variable names excluding globals from <see cref="P:StringMath.MathExpr.Variables"/>.</summary>
+        </member>
+        <member name="P:StringMath.MathExpr.Variables">
+            <summary>A collection of variable names including globals extracted from the <see cref="P:StringMath.MathExpr.Text"/>.</summary>
+        </member>
+        <member name="M:StringMath.MathExpr.#ctor(System.String)">
+            <summary>Constructs a <see cref="T:StringMath.MathExpr"/> from a string.</summary>
+            <param name="text">The math expression.</param>
+        </member>
+        <member name="M:StringMath.MathExpr.#ctor(System.String,StringMath.IMathContext)">
+            <summary>Constructs a <see cref="T:StringMath.MathExpr"/> from a string.</summary>
+            <param name="text">The math expression.</param>
+            <param name="context">The <see cref="T:StringMath.IMathContext"/> in which this expression is evaluated.</param>
+        </member>
+        <member name="M:StringMath.MathExpr.#ctor(StringMath.Expressions.IExpression,StringMath.IMathContext)">
+            <summary>Constructs a <see cref="T:StringMath.MathExpr"/> from an expression tree.</summary>
+            <param name="expression">The expression tree.</param>
+            <param name="context">The <see cref="T:StringMath.IMathContext"/> in which this expression is evaluated.</param>
+        </member>
+        <member name="P:StringMath.MathExpr.Result">
+            <summary>The result of the expression.</summary>
+            <remarks>The variables used in the expression must be set before getting the result.</remarks>
+        </member>
+        <member name="P:StringMath.MathExpr.Text">
+            <summary>Creates a string representation of the current expression.</summary>
+        </member>
+        <member name="M:StringMath.MathExpr.Substitute(System.String,System.Double)">
+            <summary>Substitutes the variable with the given value.</summary>
+            <param name="name">The name of the variable.</param>
+            <param name="value">The new value.</param>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile(System.String)">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile(System.String,System.String)">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile(System.String,System.String,System.String)">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile(System.String,System.String,System.String,System.String)">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.Compile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>Compiles a <see cref="T:StringMath.MathExpr"/> into a delegate.</summary>
+            <returns>A type safe delegate.</returns>
+        </member>
+        <member name="M:StringMath.MathExpr.op_Implicit(System.String)~StringMath.MathExpr">
+            <summary>Converts a string to a <see cref="T:StringMath.MathExpr"/>.</summary>
+            <param name="value">The value to convert.</param>
+        </member>
+        <member name="M:StringMath.MathExpr.op_Implicit(StringMath.MathExpr)~System.Double">
+            <summary>Evaluates a <see cref="T:StringMath.MathExpr"/>.</summary>
+            <param name="expression"></param>
+        </member>
+        <member name="P:StringMath.MathExpr.Item(System.String)">
+            <inheritdoc cref="M:StringMath.MathExpr.Substitute(System.String,System.Double)" />
+        </member>
+        <member name="M:StringMath.MathExpr.SetOperator(System.String,System.Func{System.Double,System.Double,System.Double},System.Nullable{StringMath.Precedence})">
+            <summary>Add a new binary operator or overwrite an existing operator implementation.</summary>
+            <param name="name">The operator's string representation.</param>
+            <param name="operation">The operation to execute for this operator.</param>
+            <param name="precedence"><see cref="F:StringMath.Precedence.UserDefined"/> precedence by default.</param>
+            <returns>The current math expression.</returns>
+            <remarks>Operators are inherited from <see cref="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double,System.Double},System.Nullable{StringMath.Precedence})"/>.</remarks>
+        </member>
+        <member name="M:StringMath.MathExpr.SetOperator(System.String,System.Func{System.Double,System.Double})">
+            <summary>Add a new unary operator or overwrite an existing operator implementation. <see cref="T:StringMath.Precedence"/> is always <see cref="F:StringMath.Precedence.Prefix" />.</summary>
+            <param name="name">The operator's string representation.</param>
+            <param name="operation">The operation to execute for this operator.</param>
+            <returns>The current math expression.</returns>
+            <remarks>Operators are inherited from <see cref="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double})"/>.</remarks>
+        </member>
+        <member name="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double,System.Double},System.Nullable{StringMath.Precedence})">
+            <summary>Add a new binary operator or overwrite an existing operator implementation.</summary>
+            <param name="name">The operator's string representation.</param>
+            <param name="operation">The operation to execute for this operator.</param>
+            <param name="precedence"><see cref="F:StringMath.Precedence.UserDefined"/> precedence by default.</param>
+            <remarks>Operators will be available in all <see cref="T:StringMath.MathExpr"/> expressions.</remarks>
+        </member>
+        <member name="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double})">
+            <summary>Add a new unary operator or overwrite an existing operator implementation. <see cref="T:StringMath.Precedence"/> is always <see cref="F:StringMath.Precedence.Prefix" />.</summary>
+            <param name="name">The operator's string representation.</param>
+            <param name="operation">The operation to execute for this operator.</param>
+            <returns>The current math expression.</returns>
+            <remarks>Operators will be available in all <see cref="T:StringMath.MathExpr"/> expressions. Operators are inherited from <see cref="M:StringMath.MathExpr.AddOperator(System.String,System.Func{System.Double,System.Double})"/>.</remarks>
+        </member>
+        <member name="M:StringMath.MathExpr.AddVariable(System.String,System.Double)">
+            <inheritdoc cref="M:StringMath.MathExpr.Substitute(System.String,System.Double)"/>
+            <remarks>Variables will be available in all <see cref="T:StringMath.MathExpr"/> expressions.</remarks>
+        </member>
+        <member name="M:StringMath.MathExpr.ToString">
+            <inheritdoc cref="P:StringMath.MathExpr.Text"/>
+        </member>
+        <member name="T:StringMath.Parser">
+            <summary>A simple parser.</summary>
+        </member>
+        <member name="M:StringMath.Parser.#ctor(StringMath.Tokenizer,StringMath.IMathContext)">
+            <summary>Initializes a new instance of a parser.</summary>
+            <param name="tokenizer">The tokenizer.</param>
+            <param name="mathContext">The math context.</param>
+        </member>
+        <member name="M:StringMath.Parser.Parse">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Token">
+            <summary>A token containing basic information about some text.</summary>
+        </member>
+        <member name="M:StringMath.Token.#ctor(StringMath.TokenType,System.String,System.Int32)">
+            <summary>Initializes a new instance of a token.</summary>
+            <param name="type">The token type.</param>
+            <param name="text">The token value.</param>
+            <param name="position">The token's position in the input string.</param>
+        </member>
+        <member name="F:StringMath.Token.Position">
+            <summary>The token's position in the input string.</summary>
+        </member>
+        <member name="F:StringMath.Token.Text">
+            <summary>The token value.</summary>
+        </member>
+        <member name="F:StringMath.Token.Type">
+            <summary>The token type.</summary>
+        </member>
+        <member name="M:StringMath.Token.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.Tokenizer">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Tokenizer.#ctor(StringMath.SourceText)">
+            <summary>Creates a new instance of the tokenizer.</summary>
+            <param name="text">The text to tokenize.</param>
+        </member>
+        <member name="M:StringMath.Tokenizer.#ctor(System.String)">
+            <summary>Creates a new instance of the tokenizer.</summary>
+            <param name="text">The text to tokenize.</param>
+        </member>
+        <member name="M:StringMath.Tokenizer.ReadToken">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Tokenizer.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.TokenType">
+            <summary>Available token types.</summary>
+        </member>
+        <member name="F:StringMath.TokenType.Unknown">
+            <summary>Unknown token.</summary>
+        </member>
+        <member name="F:StringMath.TokenType.EndOfCode">
+            <summary>\0</summary>
+        </member>
+        <member name="F:StringMath.TokenType.Identifier">
+            <summary>[aA-zZ_]+[aA-zZ0-9_]</summary>
+        </member>
+        <member name="F:StringMath.TokenType.Number">
+            <summary>1 or .1 or 1.1</summary>
+        </member>
+        <member name="F:StringMath.TokenType.OpenParen">
+            <summary>(</summary>
+        </member>
+        <member name="F:StringMath.TokenType.CloseParen">
+            <summary>)</summary>
+        </member>
+        <member name="F:StringMath.TokenType.Operator">
+            <summary>Everything excluding ( ) { } ! . 0 1 2 3 4 5 6 7 8 9 \0</summary>
+        </member>
+        <member name="F:StringMath.TokenType.Exclamation">
+            <summary>!</summary>
+        </member>
+        <member name="T:StringMath.Precedence">
+            <summary>The operator precedence.</summary>
+        </member>
+        <member name="F:StringMath.Precedence.None">
+            <summary>The lowest precedence value.</summary>
+        </member>
+        <member name="F:StringMath.Precedence.Addition">
+            <summary>Addition precedence (0).</summary>
+        </member>
+        <member name="F:StringMath.Precedence.Multiplication">
+            <summary>Multiplication precedence (4).</summary>
+        </member>
+        <member name="F:StringMath.Precedence.Power">
+            <summary>Power precedence (8).</summary>
+        </member>
+        <member name="F:StringMath.Precedence.Logarithmic">
+            <summary>Logarithmic precedence (16).</summary>
+        </member>
+        <member name="F:StringMath.Precedence.UserDefined">
+            <summary>User defined precedence (32).</summary>
+        </member>
+        <member name="F:StringMath.Precedence.Prefix">
+            <summary>The highest precedence value.</summary>
+        </member>
+        <member name="M:StringMath.Precedence.op_Implicit(System.Nullable{StringMath.Precedence})~System.Int32">
+            <summary>Gets the value of precedence.</summary>
+            <param name="precedence">The precedence.</param>
+        </member>
+        <member name="M:StringMath.Precedence.op_Implicit(System.Int32)~StringMath.Precedence">
+            <summary>Gets the precedence from a value.</summary>
+            <param name="precedence">The value.</param>
+        </member>
+        <member name="M:StringMath.Precedence.Equals(StringMath.Precedence)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Precedence.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Precedence.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Precedence.op_Equality(StringMath.Precedence,StringMath.Precedence)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.Precedence.op_Inequality(StringMath.Precedence,StringMath.Precedence)">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.IVariablesCollection">
+            <summary>A collection of variables.</summary>
+        </member>
+        <member name="M:StringMath.IVariablesCollection.SetValue(System.String,System.Double)">
+            <summary>Overwrites the value of a variable.</summary>
+            <param name="name">The variable's name.</param>
+            <param name="value">The new value.</param>
+        </member>
+        <member name="M:StringMath.IVariablesCollection.TryGetValue(System.String,System.Double@)">
+            <summary>Gets the value of the variable.</summary>
+            <param name="name">The variable's name.</param>
+            <param name="value">The value of the variable.</param>
+            <returns><c>true</c> if the variable exists, false otherwise.</returns>
+        </member>
+        <member name="M:StringMath.IVariablesCollection.Contains(System.String)">
+            <summary>Tells whether the variable is defined or not.</summary>
+            <param name="name">The name of the variable.</param>
+            <returns>True if variable was previously defined. False otherwise.</returns>
+        </member>
+        <member name="P:StringMath.IVariablesCollection.Item(System.String)">
+            <inheritdoc cref="M:StringMath.IVariablesCollection.SetValue(System.String,System.Double)" />
+        </member>
+        <member name="T:StringMath.VariablesCollection">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.VariablesCollection.CopyTo(StringMath.IVariablesCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.VariablesCollection.GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="P:StringMath.VariablesCollection.Item(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.VariablesCollection.SetValue(System.String,System.Double)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.VariablesCollection.TryGetValue(System.String,System.Double@)">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.VariablesCollection.Contains(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:StringMath.EvaluateExpression">
+            <inheritdoc />
+        </member>
+        <member name="M:StringMath.EvaluateExpression.#ctor(StringMath.IMathContext,StringMath.IVariablesCollection)">
+            <summary>Initializez a new instance of an expression evaluator.</summary>
+            <param name="context">The math context.</param>
+            <param name="variables">The variables collection.</param>
+        </member>
+        <member name="T:StringMath.ExpressionVisitor">
+            <summary>Contract for expression visitors.</summary>
+        </member>
+        <member name="M:StringMath.ExpressionVisitor.Visit(StringMath.Expressions.IExpression)">
+            <summary>Visits an expression tree and transforms it into another expression tree.</summary>
+            <param name="expression">The expression to transform.</param>
+            <returns>A new expression tree.</returns>
+        </member>
+    </members>
+</doc>
