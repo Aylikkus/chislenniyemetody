@@ -1,10 +1,12 @@
 ﻿using LiveCharts.Defaults;
+using System.Collections.Generic;
 using System.Text;
+using System.Windows.Documents;
 
 namespace Differentiation
 {
     public interface IDifferentiationMethod
     {
-        ObservablePoint[] Differentiate(int a, int b, double step, int degree, string function);
+        List<ObservablePoint> Differentiate(double a, double b, double step, int degree, string function);
     }
 }

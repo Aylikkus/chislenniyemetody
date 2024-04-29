@@ -65,6 +65,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CentralDiff.cs" />
+    <Compile Include="Utility.cs" />
     <Compile Include="Cubic.cs" />
     <Compile Include="Linear.cs" />
     <Compile Include="MNK.cs" />

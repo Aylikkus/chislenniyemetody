@@ -76,7 +76,7 @@ namespace Differentiation
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            dataModel.IntegrationMethod = getMethod(
+            dataModel.DifferentiationMethod = getMethod(
                 (string)((ComboBoxItem)e.AddedItems[0]).Content);
             dataModel.Draw(getFunction());
         }

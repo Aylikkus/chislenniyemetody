@@ -13,9 +13,10 @@ namespace Differentiation
 {
     public class DataModel
     {
-        private LineSeries lineSeries;
+        private LineSeries functionSeries;
+        private LineSeries differentialSeries;
         public CartesianChart CartesianChart { get; set; }
-        public IDifferentiationMethod IntegrationMethod { get; set; }
+        public IDifferentiationMethod DifferentiationMethod { get; set; }
         public double A { get; set; }
         public double B { get; set; }
         public double Step { get; set; }
@@ -25,7 +26,7 @@ namespace Differentiation
         {
             CartesianChart = chart;
             chart.Series = new SeriesCollection();
-            lineSeries = new LineSeries
+            functionSeries = new LineSeries
             {
                 Fill = Brushes.Transparent,
                 LineSmoothness = 0,
@@ -33,8 +34,17 @@ namespace Differentiation
                 Stroke = Brushes.Red,
                 Values = new ChartValues<ObservablePoint>()
             };
-            CartesianChart.Series.Add(lineSeries);
-            IntegrationMethod = method;
+            CartesianChart.Series.Add(functionSeries);
+            differentialSeries = new LineSeries
+            {
+                Fill = Brushes.Transparent,
+                LineSmoothness = 0,
+                StrokeThickness = 1,
+                Stroke = Brushes.Black,
+                Values = new ChartValues<ObservablePoint>()
+            };
+            CartesianChart.Series.Add(differentialSeries);
+            DifferentiationMethod = method;
         }
 
         internal void Draw(string function)
@@ -51,8 +61,13 @@ namespace Differentiation
                 }
                 catch { break; }
             }
-            lineSeries.Values.Clear();
-            lineSeries.Values.AddRange(points);
+            functionSeries.Values.Clear();
+            functionSeries.Values.AddRange(points);
+
+            List<ObservablePoint> diffs = 
+                DifferentiationMethod.Differentiate(A, B, Step, Degree, function);
+            differentialSeries.Values.Clear();
+            differentialSeries.Values.AddRange(diffs);
         }
     }
 }
