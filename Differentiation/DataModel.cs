@@ -51,6 +51,12 @@ namespace Differentiation
         {
             if (Step <= 0) { return; }
 
+            try
+            {
+                function.Substitute("x", 0);
+            }
+            catch (MathException) { return; }
+
             List<ObservablePoint> points = new List<ObservablePoint>();
             for (double x = A; x <= B; x += Step)
             {

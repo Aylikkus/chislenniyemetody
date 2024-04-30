@@ -42,30 +42,39 @@ namespace Differentiation
             {
                 case "Левая разность":
                     method = new LeftDiff();
+                    degree.IsEnabled = true;
                     break;
                 case "Правая разность":
                     method = new RightDiff();
+                    degree.IsEnabled = true;
                     break;
                 case "Центральная разность":
                     method = new CentralDiff();
+                    degree.IsEnabled = true;
                     break;
                 case "Линейная интерполяция":
                     method = new Linear();
+                    degree.IsEnabled = true;
                     break;
                 case "Квадратичная интерполяция":
                     method = new Square();
+                    degree.IsEnabled = false;
                     break;
                 case "Кубическая интерполяция":
                     method = new Cubic();
+                    degree.IsEnabled = false;
                     break;
                 case "Многочлен Ньютона":
                     method = new Newton();
+                    degree.IsEnabled = false;
                     break;
                 case "Метод неопределённых коэффициентов":
                     method = new MNK();
+                    degree.IsEnabled = false;
                     break;
                 case "Формула Рунге":
                     method = new Runge();
+                    degree.IsEnabled = false;
                     break;
                 default:
                     break;
@@ -76,6 +85,8 @@ namespace Differentiation
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (degree == null) return;
+
             dataModel.DifferentiationMethod = getMethod(
                 (string)((ComboBoxItem)e.AddedItems[0]).Content);
             dataModel.Draw(getFunction());

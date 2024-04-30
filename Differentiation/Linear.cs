@@ -7,7 +7,7 @@ namespace Differentiation
     {
         public List<ObservablePoint> Differentiate(double a, double b, double step, int degree, string function)
         {
-            throw new System.NotImplementedException();
+            return new RightDiff().Differentiate(a, b, step, degree, function);
         }
     }
 }

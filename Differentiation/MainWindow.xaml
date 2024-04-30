@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
         <Label Content="Метод дифференцирования" Grid.Column="0" HorizontalAlignment="Left" Width="46"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Height="20" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1" IsEditable="True" Margin="0,5,0,5" Width="62">
-            <ComboBoxItem Content="Левая разность"/>
+            <ComboBoxItem Content="Левая разность" IsSelected="True"/>
             <ComboBoxItem Content="Правая разность"/>
             <ComboBoxItem Content="Центральная разность"/>
             <ComboBoxItem Content="Линейная интерполяция"/>

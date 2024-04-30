@@ -18,8 +18,8 @@ namespace Differentiation
                     for (int i = 0; i <= degree; i++)
                     {
                         double C_im = Utility.GetBinCoef(degree, i);
-                        double fxkh0 = function.Substitute("x", x + (i * step)).Result;
-                        diff += Math.Pow(-1, degree - i) * C_im * fxkh0;
+                        double fxkh = function.Substitute("x", x + (i * step)).Result;
+                        diff += Math.Pow(-1, degree - i) * C_im * fxkh;
                     }
                     points.Add(new ObservablePoint(x, diff / Math.Pow(step, degree)));
                 }
@@ -27,6 +27,18 @@ namespace Differentiation
             }
 
             return points;
+        }
+
+        public static double FiniteDiff(double x, double step, int degree, string function)
+        {
+            double diff = 0;
+            for (int i = 0; i <= degree; i++)
+            {
+                double C_im = Utility.GetBinCoef(degree, i);
+                double fxkh = function.Substitute("x", x + (i * step)).Result;
+                diff += Math.Pow(-1, degree - i) * C_im * fxkh;
+            }
+            return diff;
         }
     }
 }
