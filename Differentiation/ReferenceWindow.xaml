@@ -7,6 +7,22 @@
         mc:Ignorable="d"
         Title="ReferenceWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Производная первой степени для x^3"/>
+        <DataGrid x:Name="table" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" IsReadOnly="True" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=name}"/>
+                <DataGridTextColumn Header="0,8" Binding="{Binding StringFormat=\{0:F\}, Path=first}"/>
+                <DataGridTextColumn Binding="{Binding StringFormat=\{0:F\}, Path=firstDiff}"/>
+                <DataGridTextColumn Header="0,9" Binding="{Binding StringFormat=\{0:F\}, Path=second}"/>
+                <DataGridTextColumn Binding="{Binding StringFormat=\{0:F\}, Path=secondDiff}"/>
+                <DataGridTextColumn Header="1" Binding="{Binding StringFormat=\{0:F\}, Path=third}"/>
+                <DataGridTextColumn Binding="{Binding StringFormat=\{0:F\}, Path=thirdDiff}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>

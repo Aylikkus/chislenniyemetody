@@ -66,7 +66,7 @@ namespace Differentiation
                     break;
                 case "Многочлен Ньютона":
                     method = new Newton();
-                    degree.IsEnabled = false;
+                    degree.IsEnabled = true;
                     break;
                 case "Метод неопределённых коэффициентов":
                     method = new MNK();
