@@ -72,10 +72,6 @@ namespace Differentiation
                     method = new MNK();
                     degree.IsEnabled = false;
                     break;
-                case "Формула Рунге":
-                    method = new Runge();
-                    degree.IsEnabled = false;
-                    break;
                 default:
                     break;
             }

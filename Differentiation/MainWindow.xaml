@@ -35,7 +35,6 @@
             <ComboBoxItem Content="Кубическая интерполяция"/>
             <ComboBoxItem Content="Многочлен Ньютона"/>
             <ComboBoxItem Content="Метод неопределённых коэффициентов"/>
-            <ComboBoxItem Content="Формула Рунге"/>
         </ComboBox>
         <Label Content="a" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="72,0,0,0"/>
         <TextBox x:Name="a" TextWrapping="Wrap" Text="" Height="20" Width="43" HorizontalAlignment="Left" Grid.Column="2" TextChanged="a_TextChanged" Margin="21,5,0,5"/>

@@ -74,7 +74,6 @@
       <DependentUpon>ReferenceWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RightDiff.cs" />
-    <Compile Include="Runge.cs" />
     <Compile Include="Square.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

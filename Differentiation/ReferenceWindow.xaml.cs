@@ -55,6 +55,7 @@ namespace Differentiation
             table.Items.Add(getFromMethod("Квадратической интерполяции", new Square()));
             table.Items.Add(getFromMethod("Кубической интерполяции", new Cubic()));
             table.Items.Add(getFromMethod("Многочлены Ньютона", new Newton()));
+            table.Items.Add(getFromMethod("Метод Неопределённых Коэффициентов", new MNK()));
         }
 
         Entry getAnalytical()
