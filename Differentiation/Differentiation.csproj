@@ -41,11 +41,26 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Rychusoft.NumericalLibraries.Calculator, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Rychusoft.NumericalLibraries.Calculator.1.1.1\lib\net45\Rychusoft.NumericalLibraries.Calculator.dll</HintPath>
+    </Reference>
+    <Reference Include="Rychusoft.NumericalLibraries.Common, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Rychusoft.NumericalLibraries.Common.1.1.1\lib\net45\Rychusoft.NumericalLibraries.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Rychusoft.NumericalLibraries.Derivative, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Rychusoft.NumericalLibraries.Derivative.1.1.1\lib\net45\Rychusoft.NumericalLibraries.Derivative.dll</HintPath>
+    </Reference>
     <Reference Include="StringMath, Version=4.1.2.0, Culture=neutral, PublicKeyToken=58ca583181d34478, processorArchitecture=MSIL">
       <HintPath>packages\StringMath.4.1.2\lib\net472\StringMath.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />

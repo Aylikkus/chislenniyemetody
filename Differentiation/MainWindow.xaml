@@ -13,20 +13,23 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="60px"/>
+            <ColumnDefinition Width="60px"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="Метод дифференцирования" Grid.Column="0" HorizontalAlignment="Left" Width="46"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" Height="20" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1" IsEditable="True" Margin="0,5,0,5" Width="62">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1" IsEditable="True" Margin="0,5,0,5" Height="20" Grid.ColumnSpan="2">
             <ComboBoxItem Content="Левая разность" IsSelected="True"/>
             <ComboBoxItem Content="Правая разность"/>
             <ComboBoxItem Content="Центральная разность"/>
@@ -36,18 +39,18 @@
             <ComboBoxItem Content="Многочлен Ньютона"/>
             <ComboBoxItem Content="Метод неопределённых коэффициентов"/>
         </ComboBox>
-        <Label Content="a" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="72,0,0,0"/>
-        <TextBox x:Name="a" TextWrapping="Wrap" Text="" Height="20" Width="43" HorizontalAlignment="Left" Grid.Column="2" TextChanged="a_TextChanged" Margin="21,5,0,5"/>
-        <Label Content="b" Grid.Column="3" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-        <TextBox x:Name="b" TextWrapping="Wrap" Text="" Height="20" Width="31" HorizontalAlignment="Left" Grid.Column="3" TextChanged="b_TextChanged" Margin="32,5,0,5"/>
-        <Label Content="Шаг" Grid.Column="4" HorizontalAlignment="Left"/>
-        <TextBox x:Name="step" TextWrapping="Wrap" Text="" Height="20" Width="30" HorizontalAlignment="Left" Grid.Column="4" TextChanged="step_TextChanged" Margin="36,5,0,5"/>
-        <Label Content="Степень" Grid.Column="5" HorizontalAlignment="Left"/>
-        <TextBox x:Name="degree"  Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="72,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="68" TextChanged="degree_TextChanged"/>
-        <Label Content="Функция" Grid.Column="7" HorizontalAlignment="Left" Margin="10,0,0,0"/>
-        <TextBox x:Name="function" TextWrapping="Wrap" Text="" Height="20" Width="53" HorizontalAlignment="Center" Grid.Column="8" TextChanged="Function_TextChanged" Margin="0,5,0,5"/>
-        <Button Grid.Column="10" Click="Button_Click">Таблица</Button>
-        <lvc:CartesianChart Name="chart1" PreviewMouseWheel="chart1_PreviewMouseWheel" Zoom="Xy" ZoomingSpeed="1" Grid.Row="1" Grid.ColumnSpan="11">
+        <Label Content="a" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="a" TextWrapping="Wrap" Text="" Height="20" Width="44" Grid.Column="4" TextChanged="a_TextChanged" Margin="0,5,0,5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="b" Grid.Column="5" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="b" TextWrapping="Wrap" Text="" Height="20" Width="31" HorizontalAlignment="Center" Grid.Column="6" TextChanged="b_TextChanged" Margin="0,5,0,5" VerticalAlignment="Center"/>
+        <Label Content="Шаг" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="step" TextWrapping="Wrap" Text="" Height="20" Width="30" HorizontalAlignment="Center" Grid.Column="8" TextChanged="step_TextChanged" Margin="0,5,0,5" VerticalAlignment="Center"/>
+        <Label Content="Степень" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="degree"  Grid.Column="10" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="68" TextChanged="degree_TextChanged"/>
+        <Label Content="Функция" Grid.Column="11" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="function" TextWrapping="Wrap" Text="" Height="20" Width="53" HorizontalAlignment="Center" Grid.Column="12" TextChanged="Function_TextChanged" Margin="0,5,10,5" VerticalAlignment="Center"/>
+        <Button Grid.Column="13" Click="Button_Click" VerticalAlignment="Center">Таблица</Button>
+        <lvc:CartesianChart Name="chart1" PreviewMouseWheel="chart1_PreviewMouseWheel" Zoom="Xy" ZoomingSpeed="1" Grid.Row="1" Grid.ColumnSpan="14">
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Иксы"></lvc:Axis>
             </lvc:CartesianChart.AxisX>
