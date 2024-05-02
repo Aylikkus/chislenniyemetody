@@ -34,7 +34,52 @@ namespace Differentiation
                 catch { break; }
             }
 
+            if (degree > 1)
+            {
+                int curDegree = 1;
+                while (curDegree != degree)
+                {
+                    points = Differentiate(points, step, curDegree, function);
+                    curDegree++;
+                }
+            }
+
             return points;
+        }
+
+        private List<ObservablePoint> Differentiate(List<ObservablePoint> points, double step, int curDegree, string function)
+        {
+            List<ObservablePoint> newPoints = new List<ObservablePoint>();
+            double x_0 = points[0].X;
+            for (int i = 0; i < points.Count; i++)
+            {
+                try
+                {
+                    double x = points[i].X;
+                    double q = (x - x_0) / step;
+                    double y = points[i].Y;
+                    double diff = y;
+                    for (int j = 0; j < POLYNOMIALS; j++)
+                    {
+                        double numerator = RightDiff.FiniteDiff(x, step, curDegree + j + 2, function);
+                        for (int k = 0; k < j + 1; k++)
+                        {
+                            numerator *= q - k;
+                        }
+                        double denominator = Utility.GetFactorial(j + 1);
+                        diff += numerator / denominator;
+                    }
+                    newPoints.Add(new ObservablePoint(x, diff));
+                }
+                catch { break; }
+            }
+
+            return newPoints;
+        }
+
+        public ObservablePoint DifferentiatePoint(double x, double step, int degree, string function)
+        {
+            return Differentiate(x, x, step, degree, function)[0];
         }
     }
 }

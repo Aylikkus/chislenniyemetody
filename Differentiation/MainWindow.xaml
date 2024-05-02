@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -58,5 +59,7 @@
                 <lvc:Axis Title="Игреки"></lvc:Axis>
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
+        <Label Content="X" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="point" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="" Height="20" TextChanged="Point_TextChanged" Margin="0,5,10,5" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

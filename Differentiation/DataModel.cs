@@ -15,12 +15,16 @@ namespace Differentiation
     {
         private LineSeries functionSeries;
         private LineSeries differentialSeries;
+        private LineSeries xSeries;
+        private LineSeries xDiffSeries;
+
         public CartesianChart CartesianChart { get; set; }
         public IDifferentiationMethod DifferentiationMethod { get; set; }
         public double A { get; set; }
         public double B { get; set; }
         public double Step { get; set; }
         public int Degree { get; set; }
+        public double? X { get; set; }
 
         public DataModel(CartesianChart chart, IDifferentiationMethod method)
         {
@@ -44,6 +48,24 @@ namespace Differentiation
                 Values = new ChartValues<ObservablePoint>()
             };
             CartesianChart.Series.Add(differentialSeries);
+            xSeries = new LineSeries
+            {
+                Fill = Brushes.Transparent,
+                LineSmoothness = 0,
+                StrokeThickness = 2,
+                Stroke = Brushes.Red,
+                Values = new ChartValues<ObservablePoint>()
+            };
+            CartesianChart.Series.Add(xSeries);
+            xDiffSeries = new LineSeries
+            {
+                Fill = Brushes.Transparent,
+                LineSmoothness = 0,
+                StrokeThickness = 2,
+                Stroke = Brushes.Black,
+                Values = new ChartValues<ObservablePoint>()
+            };
+            CartesianChart.Series.Add(xDiffSeries);
             DifferentiationMethod = method;
         }
 
@@ -74,6 +96,27 @@ namespace Differentiation
                 DifferentiationMethod.Differentiate(A, B, Step, Degree, function);
             differentialSeries.Values.Clear();
             differentialSeries.Values.AddRange(diffs);
+
+            if (X == null) return;
+
+            ObservablePoint point = new ObservablePoint();
+            try
+            {
+                double y = function.Substitute("x", (double)X).Result;
+                point.X = (double)X;
+                point.Y = y;
+
+                xSeries.Values.Clear();
+                xSeries.Values.Add(point);
+            }
+            catch { }
+
+            xDiffSeries.Values.Clear();
+            xDiffSeries.Values.Add(DifferentiationMethod.DifferentiatePoint(
+                    (double)X, 
+                    Step, 
+                    Degree, 
+                    function));
         }
     }
 }

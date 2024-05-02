@@ -40,5 +40,10 @@ namespace Differentiation
             }
             return diff;
         }
+
+        public ObservablePoint DifferentiatePoint(double x, double step, int degree, string function)
+        {
+            return Differentiate(x, x, step, degree, function)[0];
+        }
     }
 }

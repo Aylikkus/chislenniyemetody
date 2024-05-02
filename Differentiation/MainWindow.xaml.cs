@@ -58,11 +58,11 @@ namespace Differentiation
                     break;
                 case "Квадратичная интерполяция":
                     method = new Square();
-                    degree.IsEnabled = false;
+                    degree.IsEnabled = true;
                     break;
                 case "Кубическая интерполяция":
                     method = new Cubic();
-                    degree.IsEnabled = false;
+                    degree.IsEnabled = true;
                     break;
                 case "Многочлен Ньютона":
                     method = new Newton();
@@ -70,7 +70,7 @@ namespace Differentiation
                     break;
                 case "Метод неопределённых коэффициентов":
                     method = new MNK();
-                    degree.IsEnabled = false;
+                    degree.IsEnabled = true;
                     break;
                 default:
                     break;
@@ -97,7 +97,7 @@ namespace Differentiation
 
             if (resDegree < 1) resDegree = 1;
 
-            if (resA < resB)
+            if (resA <= resB)
             {
                 dataModel.A = resA;
                 dataModel.B = resB;
@@ -165,8 +165,17 @@ namespace Differentiation
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ReferenceWindow referenceWindow = new ReferenceWindow();
+            ReferenceWindow referenceWindow = new ReferenceWindow(dataModel, getFunction());
             referenceWindow.Show();
+        }
+
+        private void Point_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (double.TryParse(point.Text, out double x))
+                dataModel.X = x;
+            else
+                dataModel.X = null;
+            dataModel.Draw(getFunction());
         }
     }
 }
