@@ -1,0 +1,63 @@
+﻿<Window x:Class="DifferentialEquations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DifferentialEquations"
+        mc:Ignorable="d"
+        SizeToContent="Height"
+        Title="MainWindow" Height="Auto" Width="800"
+        ResizeMode="NoResize">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0">
+            <Label Content="Метод" Margin="5"/>
+            <ComboBox x:Name="solverCb" Margin="5">
+                <ComboBoxItem Content="Эйлер" IsSelected="True"/>
+                <ComboBoxItem Content="Эйлер (пересчёт)"/>
+                <ComboBoxItem Content="Эйлер (итерационный)"/>
+                <ComboBoxItem Content="Эйлер (улучшенный)"/>
+
+                <ComboBoxItem Content="Рунге-Кутта (третий порядок)"/>
+                <ComboBoxItem Content="Рунге-Кутта (четвёртый порядок)"/>
+
+                <ComboBoxItem Content="Адамс (четыре узла)"/>
+                <ComboBoxItem Content="Адамс-Башфорт"/>
+                <ComboBoxItem Content="Адамс-Мультон"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Label  Content="Функция d(x, y)" Margin="5"/>
+            <TextBox x:Name="fxTb" Grid.Column="1" Text="x^2 + 2*y" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <Label Content="Начальное значение y0" Margin="5"/>
+            <TextBox x:Name="y0Tb" Text="0" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Margin="5">
+            <Label Content="Переменные"/>
+            <Label Content="a"/>
+            <TextBox x:Name="aTb" Text="0"/>
+            <Label Content="b"/>
+            <TextBox x:Name="bTb" Text="1"/>
+            <Label Content="h"/>
+            <TextBox x:Name="hTb" Text="0,01"/>
+        </StackPanel>
+
+        <Button x:Name="solveBtn" Grid.Row="1" Grid.ColumnSpan="4" Click="solveBtn_Click" Margin="5">Рассчитать</Button>
+    </Grid>
+</Window>
