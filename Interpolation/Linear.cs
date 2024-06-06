@@ -11,7 +11,7 @@ namespace Interpolation
     {
         public List<ObservablePoint> Interpolate(List<ObservablePoint> values)
         {
-            return new List<ObservablePoint>();
+            return values;
         }
     }
 }

@@ -39,7 +39,7 @@ namespace Interpolation
             double x2 = CartesianChart.AxisX[0].MaxValue;*/
             double x1 = -5;
             double x2 = 5;
-            double step = 0.05;
+            double step = 0.3;
             List<ObservablePoint> interpolationPoints = Function.Interpolate(
                 InterpolationMethod, x1, x2, step);
             lineSeries.Values.Clear();

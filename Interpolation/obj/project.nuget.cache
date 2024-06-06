@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xE2qZugM4h7gLIzWl7wW9IYxtTVE+Ey+tq2KsxkfrWtVlPh0qWqrZ+u3seX5XpLkl0df19F2pcXi67PuAeojVg==",
+  "dgSpecHash": "X1eaFAt515TVmSPjy1ujDfr5rpxJCIg7AdMmgHEjgDJ9keQ7i1VjHSqHTF1mWms+HZWL5G/aP4ZTQgsMFnooyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\Interpolation\\Interpolation.csproj",
+  "projectFilePath": "C:\\Users\\Иван\\source\\repos\\chislenniyemetody\\Interpolation\\Interpolation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Иван\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\Иван\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512"

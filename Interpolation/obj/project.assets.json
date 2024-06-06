@@ -86,11 +86,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\Interpolation\\Interpolation.csproj",
+      "projectUniqueName": "C:\\Users\\Иван\\source\\repos\\chislenniyemetody\\Interpolation\\Interpolation.csproj",
       "projectName": "Interpolation",
-      "projectPath": "C:\\Users\\Иван\\source\\repos\\Interpolation\\Interpolation.csproj",
+      "projectPath": "C:\\Users\\Иван\\source\\repos\\chislenniyemetody\\Interpolation\\Interpolation.csproj",
       "packagesPath": "C:\\Users\\Иван\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Иван\\source\\repos\\Interpolation\\obj\\",
+      "outputPath": "C:\\Users\\Иван\\source\\repos\\chislenniyemetody\\Interpolation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Иван\\AppData\\Roaming\\NuGet\\NuGet.Config",
